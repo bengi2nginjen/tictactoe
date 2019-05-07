@@ -8,6 +8,35 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+    td {
+        border: 1px solid grey;
+        width: 8em;
+        height: 8em;
+    }
+
+    label {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+
+    .selected {
+        background: url("img/cross.png");
+        background-size: 90%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .selected-enemy {
+        background: url("img/circle.png");
+        background-size: 90%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+  </style>
 </head>
 <body>
 
@@ -18,14 +47,37 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-6">
-      <h3>Column 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <button type="button" class="btn btn-success">Reset</button>
+      <button type="button" class="btn btn-success">Second Play</button>
+      
+      <div class="col-md-12"></div>
+
+        <table style="margin-top: 5%">
+          
+          <tr>
+            <td><label class="selected"></label></td>
+            <td><label class="selected-enemy"></label></td>
+            <td><label></label></td>
+          </tr>
+
+          <tr>
+            <td><label></label></td>
+            <td><label></label></td>
+            <td><label></label></td>
+          </tr>
+
+          <tr>
+            <td><label></label></td>
+            <td><label></label></td>
+            <td><label></label></td>
+          </tr>
+
+        </table>
+
     </div>
     <div class="col-sm-6">
       <form>
         <div class="form-group">
-          <label>Log</label>
           <textarea class="form-control" id="log" rows="15"></textarea>
       </div>
       </form>
